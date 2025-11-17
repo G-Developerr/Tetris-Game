@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div class="header-section">
+            <div class="game-info">
+                Score: <span id="score">0</span>
+                <div id="nextPieceContainer">
+                    Next: <canvas id="nextPiece" width="4" height="4"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="canvas-section">
+            <canvas id="tetris" width="300" height="500"></canvas>
+        </div>
+
+        <div id="controls" class="desktop-controls">
+            ← → ↓: Move | ↑: Rotate | Space: Hard Drop | P: Pause
+        </div>
+
+        <div id="mobileControls">
+            <div class="mobile-row">
+                <button class="mobile-btn" data-action="move-left">←</button>
+                <button class="mobile-btn" data-action="rotate">↑</button>
+                <button class="mobile-btn" data-action="move-right">→</button>
+                <button class="mobile-btn" data-action="move-down">↓</button>
+                <button class="mobile-btn" data-action="hard-drop">Drop</button>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button class="btn" id="pauseBtn">Pause</button>
+        </div>
+    </div>
+
+    <div id="gameOver">
+        <div class="game-over-text">Game Over!</div>
+        <div>Score: <span id="finalScore">0</span></div>
+        <button class="btn" id="restartBtn">Play Again</button>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
